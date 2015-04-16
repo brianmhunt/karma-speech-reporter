@@ -6,7 +6,7 @@ var SpeechReporter = function(baseReporterDecorator) {
 	this.onSpecComplete = this.writeCommonMsg = function() { };
 
   this.onRunComplete = function(browsers, results) {
-    if (browsers.length > 1 && !results.error && !results.disconnected) {
+    if (browsers.length >= 1 && !results.error && !results.disconnected) {
       if (results.failed) {
         say.speak(null, "" + results.failed + " tests failed.")
       } else {
@@ -17,7 +17,7 @@ var SpeechReporter = function(baseReporterDecorator) {
     } else if (results.disconnected) {
       say.speak(null, "Browser disconnected.")
     }
-	};
+  };
 };
 
 SpeechReporter.$inject = ['baseReporterDecorator'];
