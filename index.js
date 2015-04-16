@@ -7,7 +7,7 @@ var SpeechReporter = function(baseReporterDecorator) {
 
   this.onRunComplete = function(browsers, results) {
 		if (results.failed || results.error) {
-			say("" + results.failed + " tests failed, " + results.error + " test errors.")
+			say.speak(null, "" + results.failed + " tests failed, " + results.error + " test errors.")
 		}
 	};
 };
