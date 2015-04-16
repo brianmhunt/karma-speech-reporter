@@ -6,9 +6,17 @@ var SpeechReporter = function(baseReporterDecorator) {
 	this.onSpecComplete = this.writeCommonMsg = function() { };
 
   this.onRunComplete = function(browsers, results) {
-		if (results.failed || results.error) {
-			say.speak(null, "" + results.failed + " tests failed, " + results.error + " test errors.")
-		}
+    if (browsers.length > 1 && !results.error && !results.disconnected) {
+      if (results.failed) {
+        say.speak(null, "" + results.failed + " tests failed.")
+      } else {
+        // TODO: Say something on pass?
+      }
+    } else if (results.error) {
+      say.speak(null, "An error occurred.")
+    } else if (results.disconnected) {
+      say.speak(null, "Browser disconnected.")
+    }
 	};
 };
 
