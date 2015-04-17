@@ -1,7 +1,7 @@
 Karma Speech Reporter
 ===
 
-A third party [Karma](http://karma-runner.github.io/) reporter for speaking results using (say.js)[https://github.com/marak/say.js/].
+A third party [Karma](http://karma-runner.github.io/) reporter for speaking results using [say.js](https://github.com/marak/say.js/).
 
 Installation
 ---
