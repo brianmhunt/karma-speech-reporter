@@ -3,6 +3,11 @@ Karma Speech Reporter
 
 A third party [Karma](http://karma-runner.github.io/) reporter for speaking results using [say.js](https://github.com/marak/say.js/).
 
+Deprecated
+===
+
+This package is essentially deprecated by 0.13 of Karma, which provides the [`run_complete(browsers, results)`](http://karma-runner.github.io/0.13/dev/public-api.html) hook.
+
 Installation
 ---
 
