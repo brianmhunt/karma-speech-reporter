@@ -6,7 +6,7 @@ A third party [Karma](http://karma-runner.github.io/) reporter for speaking resu
 Deprecated
 ===
 
-This package is essentially deprecated by 0.13 of Karma, which provides the [`run_complete(browsers, results)`](http://karma-runner.github.io/0.13/dev/public-api.html) hook.
+This package is essentially deprecated as of 0.13 of Karma, which provides the [`run_complete(browsers, results)`](http://karma-runner.github.io/0.13/dev/public-api.html) hook that you can use instead.
 
 Installation
 ---
